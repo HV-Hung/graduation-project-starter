@@ -47,21 +47,29 @@ npm run dev
 Vite sẽ khởi chạy dự án tại một port mặc định (thường là 5173).
 
 ### Bước 4: Quản lý mã nguồn với Git
-Mở một Terminal mới (vẫn ở thư mục gốc của toàn dự án nhé, không phải trong thư mục `frontend`), và thực hiện các lệnh sau để tạo một kho chứa Git và thực hiện `Commit` đầu tiên:
+Mở một Terminal mới (vẫn ở thư mục gốc của toàn dự án nhé, không phải trong thư mục `frontend`), và thực hiện các lệnh sau:
 
-1.  **Khởi tạo Git:**
+1.  **Tạo file `.gitignore` ở thư mục gốc:**
+    Trước khi khởi tạo Git, hãy tạo một file `.gitignore` tại thư mục gốc của dự án để đảm bảo các file nhạy cảm không bị đẩy lên GitHub:
+    ```gitignore
+    # Không đẩy file chứa thông tin nhạy cảm (Environment Variables)
+    .env
+    ```
+    *(Lưu ý: Thư mục `frontend` đã có `.gitignore` riêng do Vite tạo sẵn. File này ở root sẽ bảo vệ thêm cho các thư mục khác như `backend` sau này.)*
+
+2.  **Khởi tạo Git:**
     ```bash
     git init
     ```
-2.  **Đánh dấu toàn bộ thay đổi để chuẩn bị commit:**
+3.  **Đánh dấu toàn bộ thay đổi để chuẩn bị commit:**
     ```bash
     git add .
     ```
-3.  **Tạo một `Commit` đầu tiên:**
+4.  **Tạo một `Commit` đầu tiên:**
     ```bash
     git commit -m "Init frontend with Vite and setup docker-compose"
     ```
-4.  **Đẩy code lên GitHub:**
+5.  **Đẩy code lên GitHub:**
     Đầu tiên, bạn cần lên [GitHub](https://github.com/) tạo một Repository trống (không chọn thêm README, .gitignore, hay license). Sau đó copy các lệnh được hướng dẫn trên GitHub dán vào Terminal. Thường nó sẽ trông như thế này:
     ```bash
     git branch -M main

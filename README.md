@@ -14,6 +14,12 @@ Dự án được chia thành 7 giai đoạn (phases) từ dễ đến khó:
 6. [Phase 6: Xây dựng CRUD API cho Backend](./06-Backend-API/README.md)
 7. [Phase 7: Ghép nối toàn hệ thống (Integration)](./07-Integration/README.md)
 
+## Tech Stack
+- **Frontend:** React.js (Vite)
+- **Backend:** Node.js + Express.js
+- **Database:** PostgreSQL + pgAdmin
+- **Containerization:** Docker Compose
+
 ## Hướng dẫn bắt đầu
 
 Hãy bắt đầu đọc hướng dẫn từ **[Phase 1](./01-DevTools-and-Docker/README.md)** và lần lượt thực hiện theo các bước chi tiết trong đó.

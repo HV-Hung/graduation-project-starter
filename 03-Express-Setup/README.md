@@ -39,7 +39,13 @@ npm install express
 ```bash
 npm install --save-dev nodemon
 ```
-*(Lưu ý: Mở file `package.json` lên và thêm `"dev": "nodemon server.js"` vào phần `"scripts"` nhé!)*
+*(Lưu ý: Mở file `package.json` lên và thêm `"dev": "nodemon server.js"` vào phần `"scripts"` nhé! Kết quả sẽ trông như thế này:)*
+```json
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "dev": "nodemon server.js"
+}
+```
 
 ### Bước 4: Viết đoạn code đầu tiên
 Tạo một file có tên `server.js` bên trong thư mục `backend`. Bạn hãy sử dụng đoạn boilerplate sau làm nền tảng:

@@ -64,7 +64,10 @@ Bây giờ, chúng ta sẽ thiết kế một bảng để lưu trữ các Todo.
 1.  Đảm bảo Docker đang chạy. Truy cập vào `http://localhost:5050` và đăng nhập pgAdmin.
 2.  Click chuột phải vào **Servers** -> **Register** -> **Server...**
     *   Thẻ **General**: Đặt tên là `Local Postgres`.
-    *   Thẻ **Connection**: Host name là `db` (đây là tên service trong file docker-compose), Username là `root`, Password là `rootpassword`. Save lại.
+     *   Thẻ **Connection**: Host name là `db` (đây là tên service trong file docker-compose), Username là `root`, Password là `rootpassword`. Save lại.
+
+> ⚠️ **Lưu ý quan trọng:** pgAdmin kết nối Postgres bằng host `db` vì cả hai đều chạy bên trong Docker (cùng network). Nhưng Express Backend chạy trên máy tính của bạn (không phải trong Docker), nên nó kết nối bằng `localhost` (như bạn sẽ thấy trong file `.env`). Đây là điểm hay bị nhầm lẫn, hãy ghi nhớ nhé!
+
 3.  Mở rộng Server vừa tạo, tìm đến Database `todolist` -> **Schemas** -> **public**.
 4.  Bạn có 2 cách để tạo bảng `todos`:
     *   **Cách 1 (Dùng Tool UI):** Click chuột phải vào **Tables** -> **Create** -> **Table...** và định nghĩa các cột.

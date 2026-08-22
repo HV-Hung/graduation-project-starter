@@ -43,7 +43,16 @@ Sử dụng hàm `pool.query('SELECT * FROM todos ORDER BY id ASC')` để lấy
 
 ## Verification (BẮT BUỘC)
 Sau khi viết xong các API, bạn KHÔNG ĐƯỢC dùng Frontend vội. Hãy kiểm tra bằng cách:
-1.  **Test API bằng Postman:** Mở Postman, tạo các Request gọi đến từng `Endpoint` (`GET`, `POST`, `PUT`, `DELETE` tại `http://localhost:3000/api/todos`). Đảm bảo kết quả trả về đúng (Status Code 200/201).
+1.  **Test API bằng Postman:** Mở Postman, tạo các Request gọi đến từng `Endpoint` tại `http://localhost:3000/api/todos`:
+    *   **GET:** Chọn method `GET`, nhấn Send. Đảm bảo trả về danh sách todos (Status 200).
+    *   **POST:** Chọn method `POST`, vào tab **Body** → chọn **raw** → chọn **JSON**, nhập nội dung sau rồi nhấn Send:
+        ```json
+        {
+          "title": "Học Express"
+        }
+        ```
+        Đảm bảo trả về todo vừa tạo (Status 201).
+    *   **PUT / DELETE:** Tương tự, thay đổi method và URL (ví dụ: `http://localhost:3000/api/todos/1`).
 2.  **Kiểm chứng bằng pgAdmin:** Sau khi gửi lệnh `POST` thêm mới từ Postman, hãy mở pgAdmin, chuột phải vào bảng `todos` -> **View/Edit Data**. Hãy tự mình xác nhận xem dữ liệu mới có thực sự xuất hiện dưới `Database` hay không. Tương tự cho các thao tác Update và Delete.
 
 ***
